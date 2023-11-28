@@ -4,9 +4,40 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.*;
 
-public class DeleteMember {
+public class DeleteMember extends JFrame{
+    private final JLabel searchLabel;
+    private final JTextField searchField;
+    private final JButton searchButton;
     
+    public DeleteMember() {
+        searchLabel = new JLabel("Enter a member ID to search:");
+        searchField = new JTextField();
+        searchButton = new JButton("Search");
+    }
+
+    public void displayDeleteMenue(){
+        setLayout(new GridLayout(1,3));
+        add(searchLabel);
+        add(searchField);
+        add(searchButton);
+
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent event) {
+                Long id = Long.parseLong(searchField.getText());
+                deleteMember(id);
+            }
+        });
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(600, 600);
+        setVisible(true);
+    }
     public void deleteMember(long id) {
 
         Connection conn = null;

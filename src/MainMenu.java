@@ -26,11 +26,6 @@ public class MainMenu extends JFrame {
         add(deleteButton);
         add(reportButton);
 
-        setTitle("Club Membership Manager");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 600);
-        setVisible(true);
-
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -55,6 +50,12 @@ public class MainMenu extends JFrame {
                 
             }
         });
+
+        setTitle("Club Membership Manager");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(600, 600);
+        setVisible(true);
+
     }
 
     public static void main(String[] args) throws Exception {

@@ -5,7 +5,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
 public class UpdateMember {
+
     public void updateMember(String first_name, String last_name, String email, int dues_paid, String dues_paid_date, String renewal_date, String membership_level, String status) {
 
         long id = 0;
@@ -63,4 +68,5 @@ public class UpdateMember {
         }
 
     }
+
 }

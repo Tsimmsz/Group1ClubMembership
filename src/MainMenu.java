@@ -5,14 +5,12 @@ import javax.swing.*;
 
 public class MainMenu extends JFrame {
 
-    // private final JTextPane welcomeTextPane;
     private final JButton addButton;
     private final JButton updateButton;
     private final JButton deleteButton;
     private final JButton reportButton;
 
     public MainMenu() {
-        // welcomeTextPane = new JTextPane();
         addButton = new JButton("Add new Member");
         updateButton = new JButton("Update a Member");
         deleteButton = new JButton("Delete a Member");
@@ -29,7 +27,8 @@ public class MainMenu extends JFrame {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                AddMember addMember = new AddMember();
+                addMember.displayAddMember();
             }
         });
         updateButton.addActionListener(new ActionListener() {

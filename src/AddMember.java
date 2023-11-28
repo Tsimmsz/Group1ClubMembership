@@ -6,6 +6,9 @@ import java.sql.Statement;
 import java.awt.*;
 import javax.swing.*;
 
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -67,6 +70,8 @@ public class AddMember extends JFrame{
             }
         }
 
+        
+
     }
 
     // private final JTextPane welcomeTextPane;
@@ -82,6 +87,7 @@ public class AddMember extends JFrame{
     private final JTextField renewalDate;
     private final JComboBox membershipLevel;
     private final JComboBox status;
+    private final JButton submit;
 
     public AddMember() {
         // welcomeTextPane = new JTextPane();
@@ -94,6 +100,7 @@ public class AddMember extends JFrame{
         renewalDate = new JTextField("Renewal Date");
         membershipLevel = new JComboBox(membershipLevels);
         status = new JComboBox(memberStatus);
+        submit = new JButton("Submit");
     }
 
     public void displayAddMember() {
@@ -107,11 +114,13 @@ public class AddMember extends JFrame{
         add(renewalDate);
         add(membershipLevel);
         add(status);
+        add(submit);
 
         setTitle("Club Membership Manager");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 600);
         setVisible(true);
+
     }
     
 }

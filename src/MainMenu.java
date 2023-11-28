@@ -29,7 +29,8 @@ public class MainMenu extends JFrame {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                AddMember addMember = new AddMember();
+                addMember.displayAddMember();
             }
         });
         updateButton.addActionListener(new ActionListener() {
